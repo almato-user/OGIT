@@ -15,7 +15,15 @@ ogit.HR:Occupation
 	basis, its own curriculum and a nominal duration -- not merely a level and a
 	subject area. Where a position requires such an occupation, the requirement
 	should point at this entry rather than restate its properties, so that what
-	the training actually covers stays available to evaluation.""";
+	the training actually covers stays available to evaluation.
+	A register describes an occupation from two sides, and they say different
+	things: an education -- what is learned, over what nominal time, on what
+	legal basis -- and the occupation as practised, where the activities and the
+	competences are stated. occupationKind says which side an entry is; the two
+	are related to each other rather than merged into one.
+	The activities are carried in ogit:values, one per line, as a WorkUnit
+	carries its sub-items, so that a post and an occupation can be held against
+	each other.""";
 	dcterms:valid "start=2026-08-17;";
 	dcterms:creator "Almato AG";
 	ogit:scope "NTO";
@@ -27,6 +35,8 @@ ogit.HR:Occupation
 		ogit.HR:occupationCode
 		ogit.HR:occupationKind
 		ogit.HR:trainingDuration
+		ogit.HR:competences
+		ogit:values
 		ogit:description
 		ogit:content
 		ogit:url
@@ -36,6 +46,8 @@ ogit.HR:Occupation
 	ogit:indexed-attributes (
 		ogit:name
 		ogit:description
+		ogit:values
+		ogit.HR:competences
 		ogit.HR:occupationCode
 	);
 	ogit:allowed (
